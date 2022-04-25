@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <H1>SISTEMA DE NACIONALIDADE</H1>
+    informe sua nacionalidade : <input type="lugar" name="pais" id="pais"> 
+    <input type="button" value="VERIFICAR" onclick="calcular()">
+    <div id="resultado"></div>
+    <script>
+        function calcular(){
+            var lugar = document.querySelector ('input#pais')
+            var res = document.querySelector('div#resultado')
+            var vel = Number (lugar.value)
+            
+            if(vel == 'BRA'){
+            
+            res.innerHTML = `<p>Sua nacionalidade é <strong> ${vel}  </strong> </p>`
+            }
+            else{
+           console.log(`Voce é estrangeiro`)
+           }
+        }
+    </script>
+
+
+</body>
+</html>
