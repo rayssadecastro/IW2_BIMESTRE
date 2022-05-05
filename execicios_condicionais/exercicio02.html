@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+</head>
+<body>
+    <h1></h1>
+    <h1 class="f2-title">Calculadora de aumento</h1>
+    
+    <form class="f2">
+        <input type="number" step="0.1" placeholder="Salário atual" autofocus>
+        <button><i class="fa-solid fa-money-bill"></i> Calcular</button>
+    </form>
+
+    <table class="t-2">
+        <tr>
+            <th>Salário atual</th><td>R$ <span id="salario_antigo">-</span></td>
+            <th>Percentual aplicado</th> <td><span id="percentual">-</span>%</td>
+            <th>Valor do aumento</th> <td>R$ <span id="valor_aumento">-</span></td>
+            <th>Novo salário</th> <td>R$ <span id="salario_novo">-</span></td>
+        </tr>
+    </table>
+
+    <script>
+        const form = document.querySelector('form'),
+      input = document.querySelector('input'),
+      salarioAntigo = document.querySelector('#salario_antigo'),
+      valorPercentual = document.querySelector('#percentual'),
+      valorAumento = document.querySelector('#valor_aumento'),
+      salarioNovo = document.querySelector('#salario_novo')
+;
+
+form.onsubmit = e => {
+    e.preventDefault();
+    let percentual, aumento;
+    let valor = Number(input.value);
+    
+    if(valor && !isNaN(valor) && valor > 0){
+        if(valor <= 280){
+            percentual = 20;
+            aumento = (valor/100 * percentual);
+
+            salarioAntigo.textContent = valor;
+            valorPercentual.textContent = percentual;
+            valorAumento.textContent = aumento;
+            salarioNovo.textContent = ((valor * 100) + (aumento * 100)) / 100
+
+        } else if (valor > 280 && valor <= 700) {
+            percentual = 15;
+            aumento = (valor/100 * percentual);
+
+            salarioAntigo.textContent = valor;
+            valorPercentual.textContent = percentual;
+            valorAumento.textContent = aumento;
+            salarioNovo.textContent = ((valor * 100) + (aumento * 100)) / 100
+
+        } else if (valor > 700 && valor <= 1500) {
+            percentual = 10;
+            aumento = (valor/100 * percentual);
+
+            salarioAntigo.textContent = valor;
+            valorPercentual.textContent = percentual;
+            valorAumento.textContent = aumento;
+            salarioNovo.textContent = ((valor * 100) + (aumento * 100)) / 100
+
+        } else {
+            percentual = 5;
+            aumento = (valor/100 * percentual);
+
+            salarioAntigo.textContent = valor;
+            valorPercentual.textContent = percentual;
+            valorAumento.textContent = aumento;
+            salarioNovo.textContent = ((valor * 100) + (aumento * 100)) / 100
+        }
+    }
+}
+    </script>
+</body>
+</html>

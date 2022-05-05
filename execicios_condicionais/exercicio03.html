@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 3</title>
+</head>
+<body>
+    <script>
+        var n1 = Number(prompt('Digite sua primeira média'))
+        var n2 = Number(prompt('Digite sua segunda média'))
+        
+        var media = ((n1 + n2)/2)
+       
+        alert('Sua primeira nota é: ' + n1 + "\n" + 'A segunda nota é: ' + n2)        
+        if(media<4.0){
+            alert('Sua Menção é E,' + "\n" + 'Voce foi reprovado' + "\n" + 'Sua média é: ' + media)
+        }
+        else if(media >4.0 && media< 6.0 ){
+            alert('Sua Menção é D,' + "\n" + 'Voce foi reprovado' + "\n" + 'Sua média é: ' + media)
+
+        }
+        else if(media>6.0 && media< 7.5){
+            alert('Sua Menção é C,' + "\n" + 'Voce foi Aprovado' + "\n" + 'Sua média é: ' + media)
+        }
+        else if(media>7.5 && media< 9.0){
+            alert('Sua Menção é B,' + "\n" + 'Voce foi Aprovado' + "\n" + 'Sua média é: ' + media)
+        }
+        else if(media>9.0 && media< 10.0){
+            alert('Sua Menção é A,' + "\n" + 'Voce foi Aprovado' + "\n" + 'Sua média é: ' + media)
+        }      
+        
+
+
+    </script>
+     
+    
+
+</body>
+</html>
