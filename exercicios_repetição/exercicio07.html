@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var impar = 0
+        var par = 0
+        for(var x = 1; x <= 10; x++){
+            var n = Number(prompt('Digite um numero inteiro '))
+            var conta = n % 2
+            if(conta == 1){
+                impar ++
+                document.write(`${impar} ° numero impar digitado = ${n} <br>`)
+            }
+            else{
+                par++
+                document.write(`${par}° numero par digitado = ${n}<br>`)
+            }
+        }
+        document.write(`<br><br> Quantidade de numeros pares ${par}<br><br>`)
+        document.write(`Quantidade de numeros Impares ${impar}`)
+    </script>
+</body>
+</html>
