@@ -1,0 +1,31 @@
+
+.but{
+    padding: 14px 40px;
+    border-radius: 8px;
+    font-size: 20px;
+    transition-duration: 0.4s;
+    background-color: rgb(124, 218, 210);
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 15px;
+    
+}
+.but :hover{
+    background-color: #4CAF50; /* Green */
+  color: white;
+}
+.img{
+    position: absolute;
+    background-color: black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 15px;
+    padding: 15px;
+}
+h1{
+    text-align: center;
+    font-size: 50px;
+}
